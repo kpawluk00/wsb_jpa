@@ -18,6 +18,10 @@ public class AddressEntity {
 	private String addressLine2;
 
 	private String postalCode;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "P_ID")
+
+	private PatientEntity patientEntity;
 
 	public Long getId() {
 		return id;
